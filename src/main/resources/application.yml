@@ -1,0 +1,34 @@
+#server:
+#  port: 9090
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    url: jdbc:oracle:thin:@211.238.142.22:1521:XE
+    username: sist1
+    password: happy
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+  #ai:
+  #  google:
+  #    genai:
+  #     api-key: 
+
+mybatis:
+  type-aliases-package: com.sist.web.vo
+  mapper-locations: mybatis/mapper/*.xml
+
+file:
+  upload:
+    place: C:/data/uploads/place
+    profile: src/main/resources/static/profile
+
