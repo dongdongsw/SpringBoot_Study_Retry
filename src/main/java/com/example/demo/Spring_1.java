@@ -21,8 +21,8 @@ public class Spring_1 {
 	 * 					ㄴ POJO => Plain Old Java Object
 	 * 							ㄴ 순수 Java만을 통해서 생성한 객체를 의미
 	 * 					ㄴ PO : 순수
-	 * 							ㄴ 제약이 없다.
-	 * 					ㄴ JO : 자바 객체
+	 * 							ㄴ 특정 기술 / 프레임워크에 종속되지 않는다.
+	 * 					ㄴ JO : 일반적인 자바 객체
 	 * 							ㄴ 평범한 자바 객체이다.
 	 * 					ㄴ POJO가 아닌건 다른 특정한 기술에 종속되는것
 	 * 							ㄴ class MyClass extends HttpServlet{
@@ -45,8 +45,37 @@ public class Spring_1 {
 	 * 					ㄴ DI : Dependency Injection => 의존성 주입
 	 * 							ㄴ 필요한 객체를 직접 만들지 않고 받아서 쓴다.
 	 * 					ㄴ 결합도가 낮아진다
-	 * 							ㄴ 결합도란
+	 * 							ㄴ 결합도 : 클래스간 의존 정도
 	 * 					ㄴ 변경에 강하다
+	 * 				
+	 * 					ㄴ Spring이 객체를 주입해준다.
+	 * 							ㄴ 주입해준다 : 보통은 BoardService bService = new BoardService(); 이렇게 객체를 생성한다.
+	 * 										그런데 Spring이 private final BoardService bService;로 주입을 받을 공간을 만든다.
+	 * 										이때 생성자인 
+	 * 											public BoardController(BoardService bService){
+	 * 												this.bService = bService;
+	 * 											} bService를 같이 만들어야 한다. 이렇게 생성자를 만들면 실제로 bService에게 주입이된다.
+	 * 										Spring 내부에서 BoardService bService = new BoardService(); 이거자체를 생성한다.
+	 * 										그래서 생성자를 통해 bService에 주입이된다.
+	 * 
+	 * 			ㄴ 4. AOP
+	 * 					ㄴ AOP : Aspect-Oriented Programming => 관점 지향 프로글래밍
+	 * 							ㄴ 비즈니스 로직과 공통 기능을 분리하는 방법이다.
+	 * 									ㄴ 공통 기능 : 여러곳에서 반복적으로 쓰이는 코드이다.
+	 *                                              그러나 비즈니스 로직은 아니다.
+	 * 					ㄴ AOP를 사용하는 이유
+	 * 							ㄴ 중복 코드를 제거하고 유지보수를 쉽게하기 위해서
+	 * 							ㄴ 비즈니스 로직의 순수성을 유지하기 위해서
+	 * 									ㄴ 비즈니스 로직이 아닌 코드를 섞지마라는 것 
+	 * 
+	 * 			ㄴ 5. PSA
+	 * 					ㄴ PSA : Portable Service Abstraction => 바꿀 수 있는 기술 추상화
+	 * 							ㄴ 기술이 바뀌어도 코드를 거의 안고치게 해주는 구조
+	 * 					ㄴ 어떻게 처리하는지는 Spring이 대신 관리
+	 * 
+	 * 					ㄴ 기술을 직접 사용하지 않게 해주는 구조
+	 * 							ㄴ 보통 yml로 설정을 하는데 개발자는 이 기술을 사용하자, 이 환경이다 이런것들만 알려주는거고 
+	 *                            실제로는 Spring 직접 연결, 제어, 사용과정을 처리한다.
 	 * 
 	 * SpringBoot란 무엇인가
 	 * 		ㄴ Spring을 설정없이 바로 쓰게 해주는 도구
