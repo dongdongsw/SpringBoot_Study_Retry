@@ -77,6 +77,23 @@ public class Spring_1 {
 	 * 							ㄴ 보통 yml로 설정을 하는데 개발자는 이 기술을 사용하자, 이 환경이다 이런것들만 알려주는거고 
 	 *                            실제로는 Spring 직접 연결, 제어, 사용과정을 처리한다.
 	 * 
+	 * 			ㄴ 6. Container
+	 * 					ㄴ Container => 용기, 그릇, 대형상자
+	 * 							ㄴ Spring이 객체들을 만들어서 보관하고 필요할 떄 꺼내서 연결해주는 공간
+	 * 					ㄴ Container을 사용하는 이유
+	 * 							ㄴ IOC, DI, AOP, PSA와 같은 Spring의 핵심 기능을 수행하기 위해 객체들을 중앙에서 관리할 필요가 있기 떄문이다.
+	 * 					ㄴ Container가 관리하는 객체를 Bean이라고 부른다.
+	 * 							
+	 * 	
+	 * 			ㄴ 7. Bean
+	 * 					ㄴ Bean => 콩, 작은 알갱이, 열매
+	 * 							ㄴ IOC, DI, AOP, PSA와 같은 Spring의 핵심 기능은 Bean을 대상으로 적용된다.
+	 * 					ㄴ Spring Container가 생성하고 생명주기를 관리하는 객체이다.
+	 * 							ㄴ 생명주기란 객체 Bean이 언제 만들어지고 언제 사용되고, 언제 사라지는지의 흐름이다.
+	 * 					ㄴ Singleton
+	 * 							ㄴ Bean은 기본적으로 하나만 만들어진다.
+	 * 					ㄴ 하나의 Bean을 여러 곳에서 공유하여 사용하기 때문에 메모리 효율과 관리가 용이하다.
+	 * 
 	 * SpringBoot란 무엇인가
 	 * 		ㄴ Spring을 설정없이 바로 쓰게 해주는 도구
 	 * 
