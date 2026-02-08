@@ -24,6 +24,10 @@ public class Spring_3 {
 	 * 					ㄴ ServiceImpl는 실제 비즈니스 로직을 구현했다.
 	 * 					ㄴ Mapper는 데이터 접근만 담당할 수 있도록 구현했다.
 	 * 
+	 *  @Mapper는 SQL과 Java 메서드를 연결해주는 데이터 접근 계층표시이다.
+	 *  		ㄴ Mybatis는 @Mapper 인터페이스를 보고 SQL과 메서드를 연결해준다.
+	 *  @Repository는 Spring에서 데이터 접근 계층(DAO)을 의미하는 표준 어노테이션이다.  
+	 *  
 	 */
 	
 }
